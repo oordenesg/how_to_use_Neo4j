@@ -6,8 +6,10 @@ Neo4j is a new way of extract information using graphical sql. The structure and
 To understand the schema and visualize it. You can use CALL db.schema.visualization
 
 
-How to select instances: (Similarities with SQL)
-SELECT Person as Persona. In this case we need to add RETURN persona. The function Limit works similar to SQL. In Neo4j: MATCH (persona:Person) RETURN persona LIMIT 10
+In order to select 10 actors from the table. We can use:
+- **MATCH (actor:Person) RETURN actor LIMIT 10**
+- *If we read this sintax in a SQL clasic way. This is like SELECT Person as actor. In this case we need to add RETURN actor.*
+
 
 
 
