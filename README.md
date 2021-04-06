@@ -8,6 +8,7 @@ To understand the schema and visualize it. You can use CALL db.schema.visualizat
 
 In order to select 10 actors from the table. We can use:
 - **MATCH (actor:Person) RETURN actor LIMIT 10**
+- **MATCH (Person) RETURN Person LIMIT 10**. In this case, we are not using **actor:**
 - *If we read this sintax in a SQL clasic way. This is like SELECT Person as actor. In this case we need to add RETURN actor.*
 
 
