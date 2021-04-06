@@ -2,7 +2,12 @@
 
 Neo4j is a new way of extract information using graphical sql. The structure and syntax that Neo4j uses is totally different compare with classic SQL structure. In fact, it is not even similar. In this repository I will add new commands and I will explain more in detail how to extract that using.
 
+
 To understand the schema and visualize it. You can use CALL db.schema.visualization
+
+
+How to select instances: (Similarities with SQL)
+SELECT Person as Persona. In this case we need to add RETURN persona. The function Limit works similar to SQL. In Neo4j: MATCH (persona:Person) RETURN persona LIMIT 10
 
 
 
