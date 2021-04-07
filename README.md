@@ -19,5 +19,14 @@ Find a movie Tom Hanks has directed. Return only the title of the movie. However
 
 **MATCH (person:Person {name: 'Tom Hanks'})-[:DIRECTED]->(movie:Movie) RETURN movie,person**
 
+If we do not want to see the node **movie** (or title). We can add an extension using the syntax *variable.property* to return the name value.
 
+**MATCH (:Person {name: 'Tom Hanks'})-[:DIRECTED]->(movie:Movie) RETURN movie.title**
 
+If want to add more information, using this example, of Tom Hanks. We can use the number syntax *varible.property* and return the information like a table.
+
+**MATCH (person:Person {name: 'Tom Hanks'})-[:DIRECTED]->(movie:Movie) RETURN person.name, person.born, movie.title, movie.released**
+
+We can also use the *AS* keyword to change the name of the variables.
+
+**MATCH (person:Person {name: 'Tom Hanks'})-[:DIRECTED]-> (movie:Movie) RETURN person.name AS name,person.born  AS 'year born', movie.title AS 'movie title', movie.released AS 'Year Released'**
