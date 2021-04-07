@@ -12,8 +12,12 @@ In order to select 10 actors from the table. We can use:
 - *If we read this sintax in a SQL classic way. This is like SELECT Person as actor. In this case we need to add RETURN actor.*
 
 Example:
-*MATCH (:Person {name: 'Tom Hanks'})-[:DIRECTED]->(movie:Movie) RETURN movie*.
-Find a movie Tom Hanks has directed. Return only the title of the movie.
+
+**MATCH (:Person {name: 'Tom Hanks'})-[:DIRECTED]->(movie:Movie) RETURN movie**.
+
+Find a movie Tom Hanks has directed. Return only the title of the movie. However if I want to return the attribute **movie** and **Person**, I should write:
+
+**MATCH (person:Person {name: 'Tom Hanks'})-[:DIRECTED]->(movie:Movie) RETURN movie,person**
 
 
 
