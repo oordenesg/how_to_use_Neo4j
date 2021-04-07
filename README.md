@@ -5,6 +5,7 @@ Neo4j is a new way of extract information using graphical sql. The structure and
 
 To understand the schema and visualize it. You can use CALL db.schema.visualization
 
+# Writing Queries 
 
 In order to select 10 actors from the table. We can use:
 - **MATCH (actor:Person) RETURN actor LIMIT 10**
@@ -30,3 +31,5 @@ If want to add more information, using this example, of Tom Hanks. We can use th
 We can also use the *AS* keyword to change the name of the variables.
 
 **MATCH (person:Person {name: 'Tom Hanks'})-[:DIRECTED]-> (movie:Movie) RETURN person.name AS name,person.born  AS 'year born', movie.title AS 'movie title', movie.released AS 'Year Released'**
+
+# Updating with Cypher
