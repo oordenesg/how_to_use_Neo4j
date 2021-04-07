@@ -33,3 +33,5 @@ We can also use the *AS* keyword to change the name of the variables.
 **MATCH (person:Person {name: 'Tom Hanks'})-[:DIRECTED]-> (movie:Movie) RETURN person.name AS name,person.born  AS 'year born', movie.title AS 'movie title', movie.released AS 'Year Released'**
 
 # Updating with Cypher
+
+In this seccion we will show you how to add data. Cyphers works very similarly to any other data access language's. To do this, we normally use the *INSERT* keywoed. However in Cypher we use *CREATE*. You can use this keyword to insert nodes, relationships, and patters into Neo4j.
