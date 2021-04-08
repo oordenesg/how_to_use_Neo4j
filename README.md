@@ -53,3 +53,8 @@ Now, we establish the relationship between both nodes.
 **MATCH (jennifer:Person {name: 'Jennifer'})
 MATCH (mark:Person {name: 'Mark'})
 CREATE (jennifer)-[rel:IS_FRIENDS_WITH]->(mark)** 
+
+With our current nodes, we can add more information about both friends. Let's update Jennifer's node to add her birthday. We can do this using this statement:
+
+**MATCH (p:Person {name: 'Jennifer'}) SET p.birthdate = date('1980-01-01') RETURN p**.
+Note that if we want to change or upde her birthday, we just have to change the date in the set clause. 
