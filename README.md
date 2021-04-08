@@ -58,3 +58,7 @@ With our current nodes, we can add more information about both friends. Let's up
 
 **MATCH (p:Person {name: 'Jennifer'}) SET p.birthdate = date('1980-01-01') RETURN p**.
 Note that if we want to change or upde her birthday, we just have to change the date in the set clause. 
+
+Imagine that we are trying to delete the relationship between both nodes. In Neo4j it is possible to do that using
+
+**MATCH (j:Person {name:'Jennifer'})-[r:IS_FRIENDS_WITH]->(m:Person {name:'Mark}) DELETE r**
