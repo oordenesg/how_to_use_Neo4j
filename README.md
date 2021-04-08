@@ -43,3 +43,13 @@ Let's image that we want to add a new friend to graph. We can add a new person u
 Great! but what happend if we made a mistake and we want to delete this node. We can do it by the following syntax:
 
 **MATCH (friend:Person {name: 'Mark'} DELETE friend**
+
+Now, let's add a new friend call Jennifer. If we add Jennifer, she will not have any relationship with mark. However we can establish a relationship between them.
+
+**CREATE (friend: Person {name: 'Jennifer'}) RETURN friend**. 
+
+Now, we establish the relationship between both nodes.
+
+**MATCH (jennifer:Person {name: 'Jennifer'})
+MATCH (mark:Person {name: 'Mark'})
+CREATE (jennifer)-[rel:IS_FRIENDS_WITH]->(mark)** 
