@@ -3,7 +3,7 @@
 Neo4j is a new way of extract information using graphical sql. The structure and syntax that Neo4j uses is totally different compare with classic SQL structure. In fact, it is not even similar. In this repository I will add new commands and I will explain more in detail how to extract that using.
 
 
-To understand the schema and visualize it. You can use CALL db.schema.visualization
+To understand the schema and visualize it. You can use **CALL db.schema.visualization**
 
 # Writing Queries 
 
@@ -35,3 +35,11 @@ We can also use the *AS* keyword to change the name of the variables.
 # Updating with Cypher
 
 In this seccion we will show you how to add data. Cyphers works very similarly to any other data access language's. To do this, we normally use the *INSERT* keywoed. However in Cypher we use *CREATE*. You can use this keyword to insert nodes, relationships, and patters into Neo4j.
+
+Let's image that we want to add a new friend to graph. We can add a new person using the following statement
+
+**CREATE (friend: Person {name: 'Mark'}) RETURN friend**. 
+
+Great! but what happend if we made a mistake and we want to delete this node. We can do it by the following syntax:
+
+**MATCH (friend:Person {name: 'Mark'} DELETE friend**
