@@ -62,3 +62,7 @@ Note that if we want to change or upde her birthday, we just have to change the 
 Imagine that we are trying to delete the relationship between both nodes. In Neo4j it is possible to do that using
 
 **MATCH (j:Person {name:'Jennifer'})-[r:IS_FRIENDS_WITH]->(m:Person {name:'Mark}) DELETE r**
+
+# Exercise 
+
+Let's practice with a real example found. Using the same dataset provided in the sandbox
