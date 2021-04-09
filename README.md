@@ -65,4 +65,9 @@ Imagine that we are trying to delete the relationship between both nodes. In Neo
 
 # Exercise 
 
-Let's practice with a real example found. Using the same dataset provided in the sandbox
+Let's practice with a real using the same data set provided in the sandbox.
+
+## Simple Patterns
+Find all actors that directed a movie they also acted in and return actor and movie nodes.
+**MATCH (p:Person)-[:ACTED_IN]->(m:Movie) MATCH (p:Person)-[:DIRECTED]->(m2:Movie) WHERE m = m2 RETURN p.name, m.title,m2.title**
+*To see the nodes, just change Return p,m,m2*
