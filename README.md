@@ -71,3 +71,6 @@ Let's practice with a real using the same data set provided in the sandbox.
 **Find all actors that directed a movie they also acted in and return actor and movie nodes.**\
 *MATCH (p:Person)-[:ACTED_IN]->(m:Movie) MATCH (p:Person)-[:DIRECTED]->(m2:Movie) WHERE m = m2 RETURN p.name, m.title,m2.title*\
 To see the nodes, just change *Return p,m,m2*
+
+**Find all actors that acted in a movie together after 2010 and return the actor names and movie node**\
+*MATCH (p:Person)-[:ACTED_IN]->(m:Movie) WHERE m.released > 2010 RETURN p.name,m.title,m.released*
