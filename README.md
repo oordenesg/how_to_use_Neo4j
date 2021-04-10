@@ -74,3 +74,6 @@ To see the nodes, just change *Return p,m,m2*
 
 **Find all actors that acted in a movie together after 2010 and return the actor names and movie node**\
 *MATCH (p:Person)-[:ACTED_IN]->(m:Movie) WHERE m.released > 2010 RETURN p.name,m.title,m.released*
+
+
+## Matching Semantics
